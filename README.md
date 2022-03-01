@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- [Code Source]()
-- [Live Demo]()
+- [Code Source](https://github.com/zougari47/illustration-chat-app)
+- [Live Demo](https://zougari47.github.io/illustration-chat-app/)
 
 ## My process
 
