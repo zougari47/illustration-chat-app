@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Chatting App</title>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            rubik: ['"Rubik"']
+          },
+          extend: {
+            colors: {
+              Pale_Viole: 'hsl(276, 100%, 81%)',
+              Moderate_Violet: 'hsl(276, 55%, 52%)',
+              Desaturated_Dark_Violet: 'hsl(271, 15%, 43%)',
+              Grayish_Blue: 'hsl(206, 6%, 79%)',
+              Very_Dark_Desaturated_Violet: 'hsl(271, 36%, 24%)',
+              Dark_Grayish_Violet: 'hsl(270, 7%, 64%)',
+              Light_Magenta: 'hsl(293, 100%, 63%)',
+              Light_Violet: 'hsl(264, 100%, 61%)',
+              White: 'hsl(0, 0%, 100%)',
+              Light_Grayish_Violet: 'hsl(270, 20%, 96%)',
+              Very_Dark_Desaturated_Violet: 'hsl(271, 36%, 24%)',
+              Very_Light_Magenta: 'hsl(289, 100%, 72%)'
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body
+    class="overflow-x-hidden font-rubik flex justify-center items-center md:overflow-hidden"
+  >
+    <main
+      id="app"
+      class="mx-auto w-screen h-screen min-h-screen before:w-[65vw] before:h-[65vh] before:absolute before:z-[2] before:bg-gradient-to-b before:from-Light_Magenta before:to-Moderate_Violet before:left-[-25%] before:top-[0] before:rounded-b-[500px] md:flex md:justify-evenly md:items-center after:w-[65vw] after:h-[65vh] after:absolute after:z-[-10] after:bg-Grayish_Blue/20 after:right-[-25%] after:bottom-[0] max-w-[1000px] after:rounded-t-[500px] before:max-h-[800px] before:max-h-[600px] md:before:top-[0] md:relative lg:before:opacity-30 2xl:after:hidden 2xl:before:hidden"
+    >
+      <!-- 
+         #################################
+         #          Phone Area           #
+         #################################
+       -->
+      <div
+        id="ilustraion_area"
+        class="w-full h-full pt-[20vh] md:p-0 flex justify-center items-center"
+      >
+        <!-- phone -->
+        <span
+          id="phone"
+          class="bg-White block w-11/12 h-full md:ml-[25%] rounded-3xl shadow-2xl relative z-[2] p-2 overflow-hidden max-w-[277.33px] max-h-[552px]"
+        >
+          <span
+            id="notch"
+            class="block w-2/4 h-6 bg-White absolute left-1/4 top-0 rounded-3xl z-[3]"
+          ></span>
+          <span
+            id="screen"
+            class="bg-Light_Grayish_Violet overflow-hidden block w-full h-full rounded-3xl"
+          >
+            <header
+              class="h-16 w-full bg-gradient-to-r from-Light_Violet to-Light_Magenta flex justify-between items-center p-2 pt-4 relative"
+            >
+              <!-- back icon  -->
+              <span
+                id="back_icon"
+                class="w-[25px] h-[25px] relative flex justify-center items-center"
+              >
+                <span
+                  class="w-[40%] h-[2.5px] bg-White rounded absolute origin-left rotate-45 translate-y-[-1px]"
+                ></span>
+                <span
+                  class="w-[40%] h-[2.5px] bg-White rounded absolute origin-left rotate-[-45deg] translate-y-[1px]"
+                ></span>
+              </span>
+              <img
+                src="./images/avatar.jpg"
+                alt="avatar"
+                class="w-[35px] h-[35px] border-[2px] border-solid border-[While] rounded-full absolute left-[15%]"
+              />
+              <span
+                id="contact_info"
+                class="block h-[35px] flex flex-col absolute left-[30%]"
+              >
+                <span id="name" class="text-White text-[14px]"
+                  >Samuel Green</span
+                >
+                <span
+                  id="status"
+                  class="text-Light_Grayish_Violet/70 text-[10px] font-normal"
+                  >available to Walk</span
+                >
+              </span>
+              <span
+                id="more_option_icon "
+                class="w-[6px] h-[16px] absolute right-[5%] flex flex-col justify-between"
+              >
+                <span
+                  class="block bg-White w-[4px] h-[4px] rounded-full"
+                ></span>
+                <span
+                  class="block bg-White w-[4px] h-[4px] rounded-full"
+                ></span>
+                <span
+                  class="block bg-White w-[4px] h-[4px] rounded-full"
+                ></span>
+              </span>
+            </header>
+            <span
+              id="msg1"
+              class="block bg-Very_Light_Magenta/10 text-Moderate_Violet text-[10.5px] absolute w-2/3 rounded p-2 pr-3 left-[7%] top-[14%] rounded-r-xl rounded-tl-xl"
+            >
+              That sounds great. I'd be happy to discuss more.</span
+            >
+          </span>
+          <span
+            id="msg2"
+            class="block bg-Very_Light_Magenta/10 text-Moderate_Violet text-[10.5px] absolute w-3/4 rounded p-2 left-[7%] top-[23%] rounded-r-xl rounded-tl-xl"
+          >
+            Could you send over some picture of your dog, please?</span
+          >
+          <span
+            id="dogs"
+            class="flex items-center justify-between w-1/2 absolute right-[7%] top-[33%]"
+          >
+            <img
+              src="./images/dog-image-1.jpg"
+              alt="dog"
+              class="rounded-xl w-[45px] h-[45px]"
+            />
+            <img
+              src="./images/dog-image-2.jpg"
+              alt="dog"
+              class="rounded-xl w-[45px] h-[45px]"
+            />
+            <img
+              src="./images/dog-image-3.jpg"
+              alt="dog"
+              class="rounded-xl w-[45px] h-[45px]"
+            />
+          </span>
+          <span
+            id="msg3"
+            class="block bg-White text-[10.5px] absolute w-2/3 rounded p-2 right-[7%] top-[42%] rounded-l-xl rounded-tr-xl shadow"
+          >
+            Here are a few pictures. She's a happy girl.
+          </span>
+          <span
+            id="msg4"
+            class="block bg-White text-[10.5px] absolute w-[40%] rounded p-2 right-[7%] top-[51%] rounded-l-xl rounded-tr-xl shadow"
+          >
+            Can you make it?
+          </span>
+          <span
+            id="msg5"
+            class="block bg-Very_Light_Magenta/10 text-Moderate_Violet text-[10.5px] absolute w-2/3 rounded p-2 pr-3 left-[7%] top-[58%] rounded-r-xl rounded-tl-xl"
+          >
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?</span
+          >
+          <span
+            id="price_area1"
+            class="flex items-center justify-between bg-gradient-to-r from-Light_Magenta to-Light_Violet w-[60%] absolute top-[70%] left-[7%] p-2 text-White rounded-r-xl rounded-tl-xl"
+          >
+            <span
+              class="w-[15px] h-[15px] border-[1px] border-solid border-[White] rounded-full"
+            ></span>
+            <span class="text-[11px] font-[400]">30 minute walk</span>
+            <span class="font-[700]">$29</span>
+          </span>
+          <span
+            id="price_area2"
+            class="flex items-center justify-between bg-gradient-to-r from-Light_Magenta to-Light_Violet w-[60%] absolute top-[78%] left-[7%] p-2 text-White rounded-r-xl rounded-tl-xl"
+          >
+            <span
+              class="w-[15px] h-[15px] border-[1px] border-solid border-[White] rounded-full"
+            ></span>
+            <span class="text-[11px] font-[400]">1 hour walk</span>
+            <span class="font-[700]">$49</span>
+          </span>
+          <!-- input + button -->
+          <span
+            id="input_area"
+            class="bg-Grayish_Blue/20 w-[94.5%] h-[10%] absolute bottom-2 rounded-b-3xl mr-2 flex justify-center items-center"
+          >
+            <span
+              id="input"
+              class="bg-White w-[85%] h-[65%] rounded-full text-Grayish_Blue text-[11px] pl-3 pt-3"
+              >Type a message...</span
+            >
+            <span
+              id="send"
+              class="w-[30px] h-[30px] bg-Very_Dark_Desaturated_Violet rounded-[50%] absolute top-[25%] right-[10%] flex justify-center items-center flex-col"
+            >
+              <span
+                class="w-[50%] h-[4px] bg-White rounded absolute origin-right rotate-45 translate-y-[1px]"
+              ></span>
+              <span
+                class="w-[50%] h-[4px] bg-White rounded origin-right rotate-[-45deg] translate-y-[-1px]"
+              ></span>
+            </span>
+          </span>
+        </span>
+      </div>
+
+      <!-- 
+         #################################
+         #           Description         #
+         #################################
+       -->
+      <section class="w-full z-[4] 2xl:shadow-lg">
+        <h1
+          class="font-[700] text-[2.5rem] w-full text-center text-Very_Dark_Desaturated_Violet mx-auto max-w-[348px] md:text-left"
+        >
+          Simple booking
+        </h1>
+        <p
+          class="my-8 w-10/12 mx-auto text-center text-Dark_Grayish_Violet max-w-[290px] md:text-left md:max-w-[350px]"
+        >
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+      var tl = gsap.timeline();
+      tl.from('#msg1', { translateX: -300, duration: 0.5 });
+      tl.from('#msg2', { translateX: -300, duration: 1.2 });
+      tl.from('#dogs', { translateX: 300, duration: 0.7 });
+      tl.from('#msg3', { translateX: 300, duration: 0.7 });
+      tl.from('#msg4', { translateX: 300, duration: 1.2 });
+      tl.from('#msg5', { translateX: -300, duration: 1.7 });
+      tl.from('#price_area1, #price_area2', { opacity: 0, duration: 0.5 });
+    </script>
+  </body>
+</html>
